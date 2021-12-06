@@ -2,6 +2,7 @@
     <div>
         <v-row>
           <v-col v-for="(item, key) in allCripto" :key="key" cols="3">
+         
             <v-card>
               <v-container>
                 <v-row>
@@ -15,8 +16,14 @@
                 </v-row>
                 <v-row>
                   <v-card-text> {{item.purpose}} </v-card-text>
-                  <v-card-text>Valor : {{item.cur}} </v-card-text>
-
+                </v-row>
+                <v-row>
+                  <v-col md="4">
+                    <v-card-text>Valor : {{item.cur}} </v-card-text>
+                  </v-col>
+                  <v-col md="8">
+                  <v-card-text>Conversão : {{item.conv}} </v-card-text>
+                  </v-col>
                 </v-row>
               </v-container>
             </v-card>
@@ -26,7 +33,7 @@
 </template>
 
 <script>
-import axios from "axios"
+
 export default {
   
   data(){
@@ -40,15 +47,9 @@ export default {
       return this.$store.state.criptos;
     },
   },
-  methods:{
-    fetch(){
-      console.log();
-      axios.get('https://developers.coinbase.com/api/v2?javascript#get-currencies')
-      .then(res=>{
-        console.log(res.data.values)
-        this.events=res.data.values})
-      .catch(err=>{console.log(err)})
-    },
+
+  async created() {
+    await this.$store.dispatch("fetch");
   },
 };
 </script>
