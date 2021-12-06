@@ -1,6 +1,7 @@
 # vue-project
 
-![Captura_projeto](https://user-images.githubusercontent.com/62195177/144780259-8ac7b280-5ea8-4723-85ea-a008ccc21497.JPG)
+
+![Captura_nova](https://user-images.githubusercontent.com/62195177/144939882-a1468494-33d1-40ef-acd3-b45325df1e5c.JPG)
 
 
 ## Project setup
