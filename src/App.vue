@@ -1,53 +1,89 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
+  <toolbar>
+  </toolbar>
+  
+  <v-navigation-drawer app clipped>
+  
+      <v-list>
+        <v-list-item-group>
+          
+          <v-list-item
+            Criptos
+            @click="$router.push('/')"
+          >
+            <v-list-item-content>
+              <v-list-item-title v-text="'Cripto'"></v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
+          <v-list-item
+            Criptos
+            @click="$router.push('/nfts')"
+          >
+            <v-list-item-content>
+              <v-list-item-title v-text="'NFTs-games-Metaverse'"></v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
 
-      <v-spacer></v-spacer>
+          <v-list-item
+            Criptos
+            @click="$router.push('/data')"
+          >
+            <v-list-item-content>
+              <v-list-item-title v-text="'Data'"></v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
 
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
+          <v-list-item
+            Criptos
+            @click="$router.push('/smart')"
+          >
+            <v-list-item-content>
+              <v-list-item-title v-text="'Smart Contracts'"></v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
 
-    <v-main>
-      <router-view/>
-    </v-main>
-  </v-app>
+          <v-list-item
+            Criptos
+            @click="$router.push('/finance')"
+          >
+            <v-list-item-content>
+              <v-list-item-title v-text="'Decentralized finance'"></v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+
+        </v-list-item-group>
+      </v-list>
+
+  </v-navigation-drawer>
+
+  <!-- Sizes your content based upon application components -->
+  <v-main>
+
+    <!-- Provides the application the proper gutter -->
+    <v-container fluid>
+
+      <!-- If using vue-router -->
+      <router-view></router-view>
+    </v-container>
+  </v-main>
+
+  <v-footer app>
+    <!-- -->
+  </v-footer>
+</v-app>
 </template>
 
 <script>
 
+import toolbar from '@/components/toolbar.vue'
+
 export default {
   name: 'App',
-
+  components: {
+    toolbar
+  },
   data: () => ({
     //
   }),

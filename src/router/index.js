@@ -1,22 +1,38 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Criptos from '../views/Criptos.vue'
+import Nfts from '../views/Nfts.vue'
+import Data from '../views/Data.vue'
+import Smart from '../views/Smart.vue'
+import Finance from '../views/Finance.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'Criptos',
+    component: Criptos
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/nfts',
+    name: 'NFTs-games-Metaverse',
+    component: Nfts
+  },
+  {
+    path: '/data',
+    name: 'Data',
+    component: Data
+  },
+  {
+    path: '/smart',
+    name: 'Smart Contracts',
+    component: Smart
+  },
+  {
+    path: '/finance',
+    name: 'Decentralized finance',
+    component: Finance
   }
 ]
 
