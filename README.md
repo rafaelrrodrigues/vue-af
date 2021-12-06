@@ -1,5 +1,8 @@
 # vue-project
 
+![Captura_projeto](https://user-images.githubusercontent.com/62195177/144780259-8ac7b280-5ea8-4723-85ea-a008ccc21497.JPG)
+
+
 ## Project setup
 ```
 npm install
